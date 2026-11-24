@@ -3,81 +3,99 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#e8f2ff">
+<meta name="theme-color" content="#d7ebfb">
 <meta name="description" content="Plan de viaje a Londres para cuatro adultos, del 4 al 7 de diciembre de 2026.">
 <title>Londres · 4–7 diciembre 2026</title>
 <style>
 :root{
- --ink:#24334b;--muted:#66758c;--bg:#f5f8fc;--card:#fff;--blue:#3976d5;
- --bluebg:#eaf2ff;--coral:#f17b69;--coralbg:#fff0ec;--mint:#e8f7f0;
- --lav:#f1edff;--line:#e4eaf2;--shadow:0 8px 24px rgba(48,76,120,.07)
+ --ink:#24334b;--muted:#66758c;--bg:#f6faff;--card:#fff;
+ --gr:#8c1d40;--grbg:#fbeff3;--grline:#ebc3cf;
+ --sky:#e6f3fd;--sky2:#d7ebfb;--line:#e1e9f2;--shadow:0 8px 24px rgba(48,76,120,.07)
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.55 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
-a{color:#2864bd;text-underline-offset:3px}
-.wrap{width:min(980px,calc(100% - 32px));margin:auto}
-.hero{padding:42px 0 34px;background:linear-gradient(120deg,#dcecff,#eeeaff 60%,#ffe9e2)}
-.eyebrow{font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#3976d5}
+a{color:var(--gr);text-underline-offset:3px}
+p{margin:0;color:#56667d}
+.wrap{width:min(940px,calc(100% - 32px));margin:auto}
+
+/* Cabecera */
+.hero{padding:42px 0 30px;position:relative;overflow:hidden;
+ background:
+  radial-gradient(circle at 8% 22%,#fff 0 2px,transparent 3px),
+  radial-gradient(circle at 22% 60%,#ffffffcc 0 2px,transparent 3px),
+  radial-gradient(circle at 41% 18%,#fff 0 1.5px,transparent 2.5px),
+  radial-gradient(circle at 58% 48%,#ffffffcc 0 2px,transparent 3px),
+  radial-gradient(circle at 74% 20%,#fff 0 2px,transparent 3px),
+  radial-gradient(circle at 91% 55%,#ffffffcc 0 1.5px,transparent 2.5px),
+  linear-gradient(120deg,var(--sky2),#f4f9ff 58%,#f8e1e8)}
+.eyebrow{font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gr)}
 h1{font-size:clamp(2.5rem,7vw,4.6rem);line-height:.98;letter-spacing:-.06em;margin:12px 0}
-.hero p{margin:0;color:#52627a;font-size:1.02rem}
-.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
-.pill{padding:6px 11px;border-radius:99px;background:#ffffffc9;border:1px solid #fff;font-size:.82rem;font-weight:700}
+h1 span{color:var(--gr)}
+.hero p{color:#52627a;font-size:1.02rem}
+.hero-photo{margin-top:24px;height:clamp(150px,26vw,230px);border-radius:18px;overflow:hidden;background:var(--sky2);box-shadow:0 12px 28px rgba(48,76,120,.14);position:relative}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block}
+
+/* Navegación */
 .nav{position:sticky;top:0;z-index:5;background:#ffffffed;border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
 .nav .wrap{display:flex;gap:6px;overflow:auto;padding:9px 0}
 .nav a{white-space:nowrap;text-decoration:none;color:#4d5d75;font-weight:750;font-size:.84rem;padding:7px 11px;border-radius:99px}
-.nav a:hover{background:var(--bluebg)}
+.nav a:hover{background:var(--sky);color:var(--gr)}
 section{scroll-margin-top:76px}
+
+/* Bloques */
 .panel{margin:22px 0;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}
 h2{font-size:1.55rem;letter-spacing:-.035em;line-height:1.2;margin:0 0 14px}
-h3{font-size:1.08rem;line-height:1.25;margin:0 0 6px}
-.hero{position:relative;overflow:hidden}
-.hero:after{content:"";display:block;height:155px;margin:24px auto 0;width:min(980px,calc(100% - 32px));border-radius:18px;background:linear-gradient(0deg,rgba(22,37,57,.18),rgba(22,37,57,.02)),url("https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1800&q=85") center 48%/cover;box-shadow:0 12px 28px rgba(48,76,120,.13)}
-.photo-strip{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:10px;margin:14px 0 18px}
-.photo{min-height:132px;border-radius:14px;overflow:hidden;background:#e8eef8;position:relative}
-.photo img{width:100%;height:100%;min-height:132px;object-fit:cover;display:block}
-.photo span{position:absolute;left:9px;bottom:9px;background:#17263acc;color:white;padding:5px 9px;border-radius:99px;font-size:.73rem;font-weight:800}
-@media(max-width:700px){.photo-strip{grid-template-columns:1fr 1fr}.photo:first-child{grid-column:span 2}.photo{min-height:115px}.photo img{min-height:115px}}
-
-p{margin:0;color:#56667d}
+h3{font-size:1.05rem;line-height:1.25;margin:0 0 4px}
 .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-.info{padding:16px;border-radius:14px;background:#f7f9fd;border:1px solid var(--line)}
-.info .k{font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;color:var(--blue);font-weight:850;margin-bottom:5px}
+.info{padding:16px;border-radius:14px;background:#f8fbff;border:1px solid var(--line)}
+.info .k{font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;color:var(--gr);font-weight:850;margin-bottom:5px}
 .info strong{display:block;font-size:1rem}
 .info p{font-size:.9rem;margin-top:4px}
-.flight{background:var(--bluebg)}
-.hotel{background:var(--mint)}
-.missing{color:#a45c4e;font-weight:750}
+.flight{background:var(--sky)}
+.hotel{background:var(--grbg)}
+.big{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin:4px 0 2px}
+.map{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.map h2{margin:0 0 3px;font-size:1.25rem}
+.btn{display:inline-block;background:var(--gr);color:#fff;text-decoration:none;font-weight:750;font-size:.88rem;padding:10px 17px;border-radius:99px}
+.btn:hover{background:#6f1633}
+
+/* Días */
 .day{padding:25px 0 4px}
-.day-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:15px}
-.day-head h2{margin:4px 0 3px;font-size:clamp(1.45rem,4vw,2rem)}
-.kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;color:var(--blue);font-weight:850}
-.subtitle{font-size:.91rem}
-.tag{white-space:nowrap;padding:6px 10px;border-radius:99px;background:var(--lav);font-size:.76rem;font-weight:800;color:#6855a4}
-.timeline{position:relative;margin-left:9px;padding-left:24px;border-left:2px solid #dbe6f7}
-.stop{position:relative;background:var(--card);border:1px solid var(--line);border-radius:15px;padding:15px 17px;margin:0 0 12px;box-shadow:var(--shadow)}
-.stop:before{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:var(--blue);left:-31px;top:21px;border:3px solid var(--bg)}
-.stop.optional{background:#fffaf8;border-style:dashed;border-color:#f0c3ba}
-.stop.optional:before{background:var(--coral)}
-.time{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--coral);font-weight:850;margin-bottom:5px}
+.day-head{padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:15px}
+.kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;color:var(--gr);font-weight:850}
+.day-head h2{margin:4px 0 0;font-size:clamp(1.45rem,4vw,2rem)}
+.photo{height:clamp(120px,22vw,185px);border-radius:16px;overflow:hidden;background:var(--sky2);margin-bottom:16px;position:relative}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.photo span{position:absolute;left:10px;bottom:10px;background:#24334bcc;color:#fff;padding:5px 10px;border-radius:99px;font-size:.74rem;font-weight:800}
+.timeline{margin-left:9px;padding-left:24px;border-left:2px solid #d3e3f5}
+.stop{position:relative;background:var(--card);border:1px solid var(--line);border-radius:15px;padding:14px 17px;margin:0 0 11px;box-shadow:var(--shadow)}
+.stop:before{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:var(--gr);left:-31px;top:21px;border:3px solid var(--bg)}
+.stop.optional{background:#fffafb;border-style:dashed;border-color:var(--grline)}
+.stop.optional:before{background:#e7a9bb}
+.time{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gr);font-weight:850;margin-bottom:4px}
 .stop p{font-size:.93rem}
-.meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}
-.chip{font-size:.74rem;padding:4px 8px;border-radius:99px;background:#f0f4fa;color:#53647c;font-weight:700}
-.chip.opt{background:var(--coralbg);color:#b45d50}
+.tip{font-size:.85rem;color:var(--muted);margin-top:6px}
+.chip{display:inline-block;margin-top:8px;font-size:.74rem;padding:4px 9px;border-radius:99px;background:var(--grbg);color:var(--gr);font-weight:750}
 .links{margin-top:8px;font-size:.88rem;font-weight:750}
-.links a{margin-right:12px}
-.note{padding:13px 15px;background:#fff8e8;border:1px solid #f3e5bd;border-radius:13px;margin-top:12px;font-size:.9rem;color:#695b37}
-.market-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.market{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px}
-.market p{font-size:.88rem}
-.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
-table{width:100%;border-collapse:collapse;min-width:520px}
-th,td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--line);font-size:.9rem}
-th{background:var(--bluebg);color:#40577e}
-tr:last-child td{border-bottom:0}
-.footer{margin-top:35px;padding:25px 0;background:#e8eef8;color:#44546d}
+.note{padding:13px 15px;background:var(--sky);border:1px solid #c9e0f4;border-radius:13px;margin-top:12px;font-size:.9rem;color:#33506f}
+.sub-head{display:flex;align-items:center;gap:10px;margin:22px 0 12px}
+.sub-head:before,.sub-head:after{content:"";flex:1;height:1px;background:var(--line)}
+.sub-head b{font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;color:var(--gr)}
+.pubs{margin-top:8px;font-size:.92rem;line-height:1.8}
+
+/* Checklist */
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.group{border:1px solid var(--line);border-radius:14px;padding:15px 16px;background:#f8fbff}
+.group h3{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gr);margin-bottom:6px}
+.group label{display:flex;gap:10px;align-items:flex-start;padding:6px 0;font-size:.92rem;cursor:pointer}
+.group input{width:19px;height:19px;margin:1px 0 0;accent-color:var(--gr);flex:none}
+.group label small{display:block;color:var(--muted);font-size:.8rem}
+.group input:checked+span{color:#9aa7b8;text-decoration:line-through}
+
+.footer{margin-top:35px;padding:25px 0;background:var(--sky2);color:#44546d}
 .footer p{font-size:.84rem;margin-top:4px}
-@media(max-width:700px){.info-grid,.market-grid{grid-template-columns:1fr}.day-head{align-items:flex-start;flex-direction:column}.wrap{width:calc(100% - 26px)}.panel{padding:16px}.hero{padding:34px 0 29px}}
+@media(max-width:700px){.info-grid,.checks{grid-template-columns:1fr}.wrap{width:calc(100% - 26px)}.panel{padding:16px}.hero{padding:34px 0 26px}}
 @media print{.nav{display:none}.stop,.panel{box-shadow:none;break-inside:avoid}.hero{print-color-adjust:exact}.wrap{width:100%}}
 </style>
 </head>
@@ -85,134 +103,145 @@ tr:last-child td{border-bottom:0}
 <header class="hero">
  <div class="wrap">
   <div class="eyebrow">Viaje en grupo · 4 adultos</div>
-  <h1>Londres<br>2026</h1>
+  <h1>Londres<br><span>2026</span></h1>
   <p>Viernes 4 – lunes 7 de diciembre · 3 noches</p>
-  <div class="pills"><span class="pill">4–7 diciembre 2026</span><span class="pill">Base: Paddington</span><span class="pill">Ruta por zonas</span></div>
+  <div class="hero-photo"><img alt="Tower Bridge al atardecer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tower_Bridge_London_Dusk_Feb_2006.jpg?width=1600" onerror="this.style.display='none'"></div>
  </div>
 </header>
 <nav class="nav"><div class="wrap">
- <a href="#viaje">Vuelos y hotel</a><a href="#viernes">Viernes 4</a><a href="#sabado">Sábado 5</a><a href="#domingo">Domingo 6</a><a href="#lunes">Lunes 7</a><a href="#reservas">Reservas</a>
+ <a href="#viaje">Vuelos y hotel</a><a href="#viernes">Viernes 4</a><a href="#sabado">Sábado 5</a><a href="#domingo">Domingo 6</a><a href="#lunes">Lunes 7</a><a href="#checks">Checklist</a>
 </div></nav>
+
 <main class="wrap">
 <section id="viaje" class="panel">
  <h2>Vuelos y alojamiento</h2>
  <div class="info-grid">
   <div class="info flight">
    <div class="k">Ida · viernes 4 de diciembre</div>
-   <strong>easyJet EZY8070 · Granada (AGP) → Gatwick (LGW)</strong>
-   <p>Salida programada: <strong>11:50</strong> · Llegada programada: <strong>13:45</strong></p>
-   <p>Viernes 4 de diciembre · duración prevista: 1 h 55 min.</p>
+   <div class="big">11:50 → 13:45</div>
+   <strong>easyJet EZY8070</strong>
+   <p>Málaga (AGP) → Londres Gatwick (LGW)</p>
   </div>
   <div class="info flight">
    <div class="k">Vuelta · lunes 7 de diciembre</div>
-   <strong>Salida del vuelo · 16:40</strong>
-   <p>Desde: <span class="missing">aeropuerto de salida por confirmar</span></p>
-   <p>Destino y número de vuelo: <span class="missing">por confirmar</span></p>
+   <div class="big">16:40 → 20:35</div>
+   <strong>easyJet EZY8075</strong>
+   <p>Londres Gatwick (LGW) → Málaga (AGP)</p>
   </div>
   <div class="info hotel">
    <div class="k">Alojamiento · 3 noches</div>
    <strong>St David’s Hotels</strong>
-   <p>14–20 Norfolk Square, Paddington, London W2 1RS, Reino Unido.</p>
-   <p>Check-in: viernes desde las 14:00 · Check-out: lunes a las 10:30.</p>
-   <p>Se puede dejar el equipaje en el hotel.</p>
+   <p>14–20 Norfolk Square, Paddington, London W2 1RS</p>
+   <p>Check-in desde 14:00 · Check-out 10:30 · Guardan maletas</p>
    <div class="links"><a href="https://www.stdavidshotels.com/" target="_blank" rel="noopener">Web del hotel ↗</a> · <a href="https://www.google.com/maps/search/?api=1&query=St+David%27s+Hotels+14-20+Norfolk+Square+London" target="_blank" rel="noopener">Ver ubicación ↗</a></div>
   </div>
   <div class="info">
-   <div class="k">Traslados principales</div>
-   <strong>Viernes: Gatwick → St David’s Hotels</strong>
-   <p>Ir desde el aeropuerto al hotel de Paddington después de aterrizar. Tiempo de llegada al hotel orientativo: 15:30–16:30, según equipaje y traslado.</p>
-   <strong style="margin-top:10px">Lunes: hotel → aeropuerto</strong>
-   <p>Volver al hotel después de Notting Hill, recoger las maletas y salir hacia el aeropuerto con margen. Confirmar aeropuerto de salida y transporte.</p>
+   <div class="k">Traslados</div>
+   <strong>Viernes · Gatwick → hotel</strong>
+   <p>Llegada al hotel ~15:30–16:30.</p>
+   <strong style="margin-top:10px">Lunes · hotel → Gatwick</strong>
+   <p>Recoger maletas y salir ~12:30; en el aeropuerto ~14:00–14:15.</p>
   </div>
  </div>
- <div class="note"><strong>Vuelo de ida confirmado con las capturas:</strong> easyJet EZY8070, Granada (AGP) → Londres Gatwick (LGW), viernes 4 de diciembre, 11:50–13:45. <strong>Falta la información del regreso:</strong> las capturas adjuntas muestran el mismo vuelo de ida (aunque el carrusel indique “vuelo 1 de 4” y “vuelo 2 de 4”). Mantenemos la salida de vuelta a las 16:40, pero falta confirmar aeropuerto, ruta y número de vuelo.</div>
+</section>
+
+<section class="panel">
+ <div class="map">
+  <div><h2>Mi mapa de Londres</h2><p>Sitios guardados de mi viaje anterior, por si queréis añadir paradas.</p></div>
+  <a class="btn" href="https://maps.app.goo.gl/M45XyxUHPU9rMBWq8?g_st=i" target="_blank" rel="noopener">Abrir en Google Maps ↗</a>
+ </div>
 </section>
 
 <section class="day" id="viernes">
- <div class="photo-strip">
-  <div class="photo"><img loading="lazy" alt="Panorámica de Londres junto al Támesis" src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1000&q=82"><span>Londres</span></div>
-  <div class="photo"><img loading="lazy" alt="Arquitectura de Londres" src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=700&q=82"><span>La ciudad</span></div>
-  <div class="photo"><img loading="lazy" alt="Calles de Londres" src="https://images.unsplash.com/photo-1520986606214-8b456906c813?auto=format&fit=crop&w=700&q=82"><span>Pasear</span></div>
- </div>
- <div class="day-head"><div><div class="kicker">Día 1 · llegada</div><h2>Viernes 4 · Gatwick, Paddington y Mayfair</h2><p class="subtitle">Llegada, paseo cercano y cena.</p></div><span class="tag">Ritmo tranquilo</span></div>
+ <div class="day-head"><div class="kicker">Día 1 · llegada</div><h2>Viernes 4 · Paddington y Mayfair</h2></div>
  <div class="timeline">
-  <article class="stop"><div class="time">13:45</div><h3>Aterrizaje en Gatwick Airport</h3><p>Llegada del vuelo. Recoger equipaje y salir hacia Londres.</p><div class="meta"><span class="chip">Aeropuerto: LGW</span></div></article>
-  <article class="stop"><div class="time">15:30–16:30 · estimado</div><h3>Gatwick → St David’s Hotels, Paddington</h3><p>Traslado al hotel, dejar equipaje y hacer el check-in si la habitación está lista. Dirección: 14–20 Norfolk Square, London W2 1RS.</p></article>
-  <article class="stop"><div class="time">16:30–17:30 · orientativo</div><h3>Paddington y Hyde Park</h3><p>Paseo desde el hotel hacia Hyde Park. Primera toma de contacto con Londres; ajustar la duración según cansancio y luz.</p></article>
-  <article class="stop optional"><div class="time">Final de la tarde · opcional</div><h3>Winter Wonderland · Hyde Park</h3><p>Recinto navideño con luces, puestos y atracciones. Entrar solo si apetece ambiente de feria; reservar entrada/franja si la organización lo requiere.</p><div class="meta"><span class="chip opt">Opcional</span><span class="chip">1,5–2 h si se visita</span></div><div class="links"><a href="https://hydeparkwinterwonderland.com/" target="_blank" rel="noopener">Web oficial ↗</a></div></article>
-  <article class="stop"><div class="time">19:00–20:00 · orientativo</div><h3>Cena en Mercato Mayfair</h3><p>Food hall dentro de la antigua iglesia de St Mark. Merece la pena por el edificio, las vidrieras y la variedad de puestos. Cada persona elige su comida allí.</p><div class="links"><a href="https://mercatometropolitano.com/locations/mayfair/" target="_blank" rel="noopener">Web oficial ↗</a></div></article>
+  <article class="stop"><div class="time">13:45</div><h3>Aterrizaje en Gatwick</h3><p>Equipaje y traslado a Londres.</p></article>
+  <article class="stop"><div class="time">15:30–16:30</div><h3>Hotel en Paddington</h3><p>Dejar maletas y check-in.</p></article>
+  <article class="stop"><div class="time">16:30–17:30</div><h3>Paddington y Hyde Park</h3><p>Paseo suave para situarse.</p></article>
+  <article class="stop optional"><div class="time">Tarde · opcional</div><h3>Winter Wonderland</h3><p>Luces, puestos y atracciones en Hyde Park (1,5–2 h).</p><span class="chip">Pendiente: confirmar con los padres</span><div class="links"><a href="https://hydeparkwinterwonderland.com/" target="_blank" rel="noopener">Web oficial ↗</a></div></article>
+  <article class="stop"><div class="time">19:00–20:00</div><h3>Cena en Mercato Mayfair</h3><p>Food hall en una antigua iglesia; cada uno elige su puesto.</p><div class="links"><a href="https://mercatometropolitano.com/locations/mayfair/" target="_blank" rel="noopener">Web oficial ↗</a></div></article>
  </div>
 </section>
 
 <section class="day" id="sabado">
- <div class="photo-strip">
-  <div class="photo"><img loading="lazy" alt="Big Ben y el Parlamento" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=82"><span>Westminster</span></div>
-  <div class="photo"><img loading="lazy" alt="Museo y arquitectura clásica" src="https://images.unsplash.com/photo-1564399579883-451a5d44ec08?auto=format&fit=crop&w=700&q=82"><span>Museos</span></div>
-  <div class="photo"><img loading="lazy" alt="Calles comerciales iluminadas" src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=700&q=82"><span>West End</span></div>
- </div>
- <div class="day-head"><div><div class="kicker">Día 2 · centro y West End</div><h2>Sábado 5 · British Museum, Westminster y luces</h2><p class="subtitle">Recorrido continuo desde Bloomsbury hasta el West End.</p></div><span class="tag">Día más completo</span></div>
+ <div class="day-head"><div class="kicker">Día 2 · centro y West End</div><h2>Sábado 5 · Museo, Westminster y luces</h2></div>
+ <div class="photo"><img loading="lazy" alt="Palacio de Westminster de noche" src="https://commons.wikimedia.org/wiki/Special:FilePath/Palace_of_Westminster,_London_-_Feb_2007.jpg?width=1600" onerror="this.parentNode.style.display='none'"><span>Westminster</span></div>
  <div class="timeline">
-  <article class="stop"><div class="time">10:00–11:30 · recomendado</div><h3>British Museum</h3><p>Visita interior breve: Great Court, Piedra Rosetta (sala 4), Egipto y momias (salas 62–63). Si queda tiempo, esculturas del Partenón (sala 18). Entrada general gratuita; reservar hora.</p><div class="links"><a href="https://www.britishmuseum.org/visit" target="_blank" rel="noopener">Entradas y visita oficial ↗</a></div></article>
-  <article class="stop"><div class="time">11:30–12:30 · orientativo</div><h3>Covent Garden → Seven Dials → Neal’s Yard</h3><p>Caminar hacia Covent Garden para ver la plaza y el mercado cubierto; continuar por Seven Dials y el pequeño patio colorido de Neal’s Yard.</p></article>
-  <article class="stop optional"><div class="time">12:30–13:15 · opcional</div><h3>Seven Dials Market</h3><p>Food hall cubierto junto a Covent Garden. Opción cómoda para comer algo; no es imprescindible si preferís continuar o comer más tarde.</p><div class="meta"><span class="chip opt">Opcional</span></div><div class="links"><a href="https://www.sevendialsmarket.com/" target="_blank" rel="noopener">Web oficial ↗</a></div></article>
-  <article class="stop"><div class="time">13:15–14:15 · orientativo</div><h3>Trafalgar Square y National Gallery</h3><p>Ver Trafalgar Square y decidir allí si entrar en la National Gallery. Colección permanente gratuita; el tiempo de visita queda a elección del grupo.</p><div class="links"><a href="https://www.nationalgallery.org.uk/visiting/plan-your-visit" target="_blank" rel="noopener">Información oficial ↗</a></div></article>
-  <article class="stop"><div class="time">14:15–15:30 · orientativo</div><h3>Whitehall → Horse Guards → Westminster</h3><p>Recorrido a pie por Whitehall y Horse Guards Parade. Ver Downing Street desde el exterior, Big Ben, Parlamento y Westminster Abbey por fuera.</p></article>
-  <article class="stop"><div class="time">15:30–16:30 · orientativo</div><h3>St James’s Park → Buckingham Palace</h3><p>Cruzar el parque hasta Buckingham Palace. Paseo y fotografías; no se plantea visita interior.</p></article>
-  <article class="stop"><div class="time">Desde las 16:30 · tarde-noche</div><h3>Regent Street → Carnaby Street → Oxford Street → Soho</h3><p>Recorrer las calles comerciales y sus luces navideñas. Parada libre para compras, cafés, pubs o cena. El grupo puede alargar o acortar esta parte.</p></article>
+  <article class="stop"><div class="time">10:00–11:30</div><h3>British Museum</h3><p>Great Court, Piedra Rosetta (sala 4), Egipto (salas 62–63). Gratis; reservar hora.</p><div class="links"><a href="https://www.britishmuseum.org/visit" target="_blank" rel="noopener">Reservar ↗</a></div></article>
+  <article class="stop"><div class="time">11:30–12:30</div><h3>Covent Garden → Seven Dials → Neal’s Yard</h3><p>Paseo a pie por plaza, mercado y patios.</p></article>
+  <article class="stop optional"><div class="time">12:30–13:15 · opcional</div><h3>Seven Dials Market</h3><p>Food hall para comer algo.</p><div class="links"><a href="https://www.sevendialsmarket.com/" target="_blank" rel="noopener">Web oficial ↗</a></div></article>
+  <article class="stop"><div class="time">13:15–14:15</div><h3>Trafalgar Square y National Gallery</h3><p>Entrada gratuita; decidir allí si entrar.</p><div class="links"><a href="https://www.nationalgallery.org.uk/visiting/plan-your-visit" target="_blank" rel="noopener">Información ↗</a></div></article>
+  <article class="stop"><div class="time">14:15–15:30</div><h3>Whitehall → Horse Guards → Westminster</h3><p>Downing Street, Big Ben, Parlamento y la Abadía por fuera.</p></article>
+  <article class="stop"><div class="time">15:30–16:30</div><h3>St James’s Park → Buckingham Palace</h3><p>Paseo y fotos con la última luz (atardece sobre las 16:00); sin visita interior.</p></article>
+  <article class="stop"><div class="time">Desde 16:30</div><h3>Regent St → Carnaby → Oxford St → Soho</h3><p>Luces navideñas, compras y cena libre.</p></article>
  </div>
- <div class="note">Si la National Gallery o alguna otra parada ocupa más tiempo, recortad las calles comerciales según las ganas. No hace falta correr para completar todo.</div>
+ <div class="note">Tramos largos: bus o metro sin problema (Westminster, Green Park u Oxford Circus). Si algo se alarga, recortad las calles comerciales.</div>
 </section>
 
 <section class="day" id="domingo">
- <div class="photo-strip">
-  <div class="photo"><img loading="lazy" alt="Tower Bridge sobre el Támesis" src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1000&q=82"><span>Tower Bridge</span></div>
-  <div class="photo"><img loading="lazy" alt="Ribera del Támesis" src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=700&q=82"><span>El Támesis</span></div>
-  <div class="photo"><img loading="lazy" alt="Catedral y edificios de Londres" src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=700&q=82"><span>La City</span></div>
- </div>
- <div class="day-head"><div><div class="kicker">Día 3 · este y ribera del Támesis</div><h2>Domingo 6 · Tower Bridge, Borough y St Paul’s</h2><p class="subtitle">Monumentos, mercado gastronómico y vistas de la City.</p></div><span class="tag">Ruta junto al río</span></div>
+ <div class="day-head"><div class="kicker">Día 3 · río, luces y noche</div><h2>Domingo 6 · Tower Bridge, South Bank y Chinatown</h2></div>
  <div class="timeline">
-  <article class="stop"><div class="time">10:00–11:00 · orientativo</div><h3>Tower of London · exterior</h3><p>Ver el recinto histórico desde fuera y recorrer el entorno junto al río. La visita interior no está incluida en el plan base porque requiere varias horas.</p></article>
-  <article class="stop"><div class="time">11:00–11:45 · orientativo</div><h3>Tower Bridge</h3><p>Caminar hasta el puente, verlo de cerca y cruzarlo o pasear por sus accesos para disfrutar de las vistas del Támesis.</p></article>
-  <article class="stop"><div class="time">12:00–13:30 · comida flexible</div><h3>Borough Market</h3><p>Mercado gastronómico para comer y probar distintos puestos. Es la parada principal de mercados del viaje. El domingo suele cerrar a las 16:00; comprobad el horario especial de diciembre.</p><div class="links"><a href="https://boroughmarket.org.uk/visit-us/" target="_blank" rel="noopener">Horarios oficiales ↗</a></div></article>
-  <article class="stop"><div class="time">13:30–14:30 · orientativo</div><h3>Southwark Cathedral y Shakespeare’s Globe</h3><p>Continuar el paseo por Southwark, viendo la catedral y el exterior del teatro de Shakespeare.</p></article>
-  <article class="stop"><div class="time">14:30–15:00 · orientativo</div><h3>Tate Modern · exterior</h3><p>No entrar al museo. Utilizarlo como punto de paso en el paseo junto al Támesis.</p></article>
-  <article class="stop"><div class="time">15:00–16:00 · orientativo</div><h3>Millennium Bridge → St Paul’s Cathedral</h3><p>Cruzar el puente hacia St Paul’s. Pararse a disfrutar de la vista de la catedral, el río y los edificios de la City. Pasear por los alrededores; entrada interior opcional.</p></article>
-  <article class="stop optional"><div class="time">Opcional · si queréis subir</div><h3>London Eye</h3><p>No está integrado en la ruta a pie: queda al oeste y añade desplazamiento. Incluirlo solo si el grupo tiene especial interés y reserva entrada.</p><div class="meta"><span class="chip opt">Opcional</span></div><div class="links"><a href="https://www.londoneye.com/" target="_blank" rel="noopener">Web oficial ↗</a></div></article>
+  <article class="stop"><div class="time">10:00–11:00</div><h3>Tower of London · exterior</h3><p>Solo por fuera y paseo junto al río.</p></article>
+  <article class="stop"><div class="time">11:00–11:45</div><h3>Tower Bridge</h3><p>Verlo de cerca y cruzarlo.</p></article>
+  <article class="stop"><div class="time">12:00–13:30</div><h3>Borough Market</h3><p>Comida. El domingo suele cerrar a las 16:00; revisar horario de diciembre.</p><div class="links"><a href="https://boroughmarket.org.uk/visit-us/" target="_blank" rel="noopener">Horarios ↗</a></div></article>
+  <article class="stop"><div class="time">13:30–14:15</div><h3>Southwark Cathedral, Globe y Tate Modern</h3><p>Paseo por Southwark, todo por fuera. Desde el Millennium Bridge se ve St Paul’s.</p></article>
+  <article class="stop"><div class="time">14:15–15:00</div><h3>Paseo por el South Bank</h3><p>Unos 30 min a pie junto al río hasta el London Eye.</p><p class="tip">Si cansa: metro de Southwark a Waterloo (1 parada) y 5 min andando.</p></article>
+  <article class="stop optional"><div class="time">15:00 · opcional</div><h3>London Eye</h3><p>2 pases reservados. Subida con el atardecer (~16:00). Los otros 2 pueden pasear por la orilla.</p><span class="chip">Pendiente: decidir si se mantiene</span><div class="links"><a href="https://www.londoneye.com/" target="_blank" rel="noopener">Web oficial ↗</a></div></article>
+  <article class="stop"><div class="time">15:45–17:00</div><h3>Southbank Centre Winter Market</h3><p>Mercadillo navideño junto al río: vino caliente y puestos. Comprobar que esté abierto esos días.</p></article>
+  <article class="stop"><div class="time">17:00–18:30</div><h3>Waterloo Bridge → Covent Garden</h3><p>Cruzar el puente de noche, con vistas a la City y Westminster, y llegar a Covent Garden con sus luces navideñas.</p><p class="tip">Unos 25 min a pie. Si cansa: bus hasta Strand o Covent Garden.</p></article>
  </div>
+
+ <div class="sub-head"><b>Noche · Chinatown y pubs</b></div>
+ <div class="timeline">
+  <article class="stop"><div class="time">18:30–20:30</div><h3>Chinatown · cena</h3><p>Gerrard Street y calles de alrededor, con farolillos y mucho ambiente.</p></article>
+  <article class="stop"><div class="time">20:30–22:30</div><h3>Ruta de pubs</h3><p>Todos a menos de 10 min andando de Chinatown. Los domingos suelen cerrar antes.</p>
+   <div class="pubs">· <a href="https://www.google.com/maps/search/?api=1&query=The+Lamb+and+Flag+Rose+Street+London" target="_blank" rel="noopener">The Lamb &amp; Flag</a> (Covent Garden)<br>· <a href="https://www.google.com/maps/search/?api=1&query=The+Harp+Chandos+Place+London" target="_blank" rel="noopener">The Harp</a> (Charing Cross)<br>· <a href="https://www.google.com/maps/search/?api=1&query=The+Salisbury+St+Martins+Lane+London" target="_blank" rel="noopener">The Salisbury</a> (St Martin’s Lane)<br>· <a href="https://www.google.com/maps/search/?api=1&query=French+House+Dean+Street+Soho+London" target="_blank" rel="noopener">The French House</a> (Soho)</div></article>
+  <article class="stop"><div class="time">Vuelta</div><h3>Al hotel</h3><p>Metro Bakerloo desde Piccadilly Circus u Oxford Circus, directo hasta Paddington.</p></article>
+ </div>
+ <div class="note"><strong>Si no se mantiene el London Eye:</strong> a las 15:00 cruzar el Millennium Bridge hacia St Paul’s Cathedral (entrada interior opcional) y, sobre las 16:30, ir en bus o metro a Covent Garden para seguir con la noche.</div>
 </section>
 
 <section class="day" id="lunes">
- <div class="photo-strip">
-  <div class="photo"><img loading="lazy" alt="Casas de colores de Notting Hill" src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1000&q=82"><span>Notting Hill</span></div>
-  <div class="photo"><img loading="lazy" alt="Calles residenciales de Londres" src="https://images.unsplash.com/photo-1520986606214-8b456906c813?auto=format&fit=crop&w=700&q=82"><span>Portobello</span></div>
-  <div class="photo"><img loading="lazy" alt="Casas y fachadas londinenses" src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=700&q=82"><span>Paseo final</span></div>
- </div>
- <div class="day-head"><div><div class="kicker">Día 4 · regreso</div><h2>Lunes 7 · Notting Hill y aeropuerto</h2><p class="subtitle">Paseo de mañana cerca del hotel y recogida de equipaje.</p></div><span class="tag">Mañana flexible</span></div>
+ <div class="day-head"><div class="kicker">Día 4 · regreso</div><h2>Lunes 7 · Notting Hill y vuelta</h2></div>
  <div class="timeline">
-  <article class="stop"><div class="time">08:30–10:15 · orientativo</div><h3>Notting Hill y Portobello Road</h3><p>Desde el hotel, paseo por Notting Hill y Portobello Road. El lunes hay menos puestos que el sábado; el interés principal es el barrio y sus calles.</p><div class="links"><a href="https://www.visitlondon.com/things-to-do/place/285499-portobello-road-market" target="_blank" rel="noopener">Guía de Portobello ↗</a></div></article>
-  <article class="stop"><div class="time">Durante la mañana</div><h3>Lancaster Road y Westbourne Grove</h3><p>Ver las casas de colores de Lancaster Road y continuar por Westbourne Grove, con tiendas y cafeterías.</p></article>
-  <article class="stop"><div class="time">10:30</div><h3>Check-out de St David’s Hotels</h3><p>La habitación debe quedar libre. Dejar o recoger el equipaje según lo acordado con el hotel; el hotel permite guardar maletas.</p></article>
-  <article class="stop"><div class="time">12:00–12:30 · orientativo</div><h3>Recoger equipaje y salir hacia el aeropuerto</h3><p>Volver al hotel, recoger las maletas y comenzar el traslado al aeropuerto de salida. Confirmar cuál es el aeropuerto del vuelo de vuelta antes de fijar la hora definitiva de salida.</p></article>
-  <article class="stop"><div class="time">16:40</div><h3>Salida del vuelo de regreso</h3><p>Hora indicada de salida. Aeropuerto, destino y número de vuelo pendientes de confirmar en la ficha del viaje.</p></article>
+  <article class="stop"><div class="time">Antes de las 10:30</div><h3>Check-out y maletas en recepción</h3><p>Dejar la habitación libre y todas las maletas abajo, en el hotel.</p></article>
+  <article class="stop"><div class="time">Mañana</div><h3>Notting Hill y Portobello Road</h3><p>Casas de colores en Lancaster Road y cafés en Westbourne Grove. Pocos puestos en lunes.</p></article>
+  <article class="stop"><div class="time">~12:30 · flexible</div><h3>Recoger maletas y salir hacia Gatwick</h3><p>Pasar por el hotel y llegar al aeropuerto ~14:00–14:15.</p></article>
+  <article class="stop"><div class="time">16:40</div><h3>Vuelo EZY8075 → Málaga</h3><p>Llegada prevista 20:35.</p></article>
  </div>
 </section>
 
-<section id="reservas" class="panel">
- <h2>Reservas y datos que revisar</h2>
- <div class="table-wrap"><table>
-  <thead><tr><th>Elemento</th><th>Qué hacer</th></tr></thead>
-  <tbody>
-   <tr><td>British Museum</td><td>Reservar entrada gratuita con hora para el sábado por la mañana.</td></tr>
-   <tr><td>National Gallery</td><td>Entrada gratuita; decidir allí si entrar.</td></tr>
-   <tr><td>Winter Wonderland</td><td>Opcional. Revisar fechas, entrada y franja en la web oficial.</td></tr>
-   <tr><td>Mercato Mayfair</td><td>Consultar horario del viernes antes de ir.</td></tr>
-   <tr><td>Borough Market</td><td>Comprobar horario del domingo 6 de diciembre.</td></tr>
-   <tr><td>London Eye</td><td>Reservar solo si decidís subir.</td></tr>
-   <tr><td>Vuelos</td><td>Añadir origen, destino, aeropuertos y números de vuelo.</td></tr>
-  </tbody>
- </table></div>
+<section id="checks" class="panel">
+ <h2>Checklist del viaje</h2>
+ <div class="checks">
+  <div class="group"><h3>Documentos</h3>
+   <label><input type="checkbox"><span>ETA británica de los 4<small>Solicitarla con antelación</small></span></label>
+   <label><input type="checkbox"><span>Pasaportes en vigor<small>Los 4, con validez para todo el viaje</small></span></label>
+   <label><input type="checkbox"><span>Tarjetas de embarque<small>Check-in online en easyJet</small></span></label>
+   <label><input type="checkbox"><span>Confirmación del hotel</span></label>
+  </div>
+  <div class="group"><h3>Dinero y móvil</h3>
+   <label><input type="checkbox"><span>Tarjeta sin comisiones<small>Pago contactless también en transporte</small></span></label>
+   <label><input type="checkbox"><span>Roaming / eSIM<small>Revisar tarifa de Reino Unido</small></span></label>
+   <label><input type="checkbox"><span>Enchufe tipo G<small>Adaptador británico</small></span></label>
+   <label><input type="checkbox"><span>Cargador y powerbank</span></label>
+  </div>
+  <div class="group"><h3>Reservas y decisiones</h3>
+   <label><input type="checkbox"><span>British Museum<small>Entrada gratuita con hora, sábado</small></span></label>
+   <label><input type="checkbox"><span>London Eye · domingo 15:00<small>2 pases reservados: mantener o cancelar</small></span></label>
+   <label><input type="checkbox"><span>Winter Wonderland<small>Confirmar con los padres</small></span></label>
+   <label><input type="checkbox"><span>Horarios<small>Mercato Mayfair (viernes), Borough Market y Winter Market (domingo)</small></span></label>
+  </div>
+  <div class="group"><h3>Maleta</h3>
+   <label><input type="checkbox"><span>Ropa de abrigo e impermeable</span></label>
+   <label><input type="checkbox"><span>Calzado cómodo para caminar</span></label>
+   <label><input type="checkbox"><span>Líquidos en bolsa y medicinas</span></label>
+   <label><input type="checkbox"><span>Equipaje de cabina según easyJet</span></label>
+  </div>
+ </div>
 </section>
 </main>
-<footer class="footer"><div class="wrap"><p>Las fotografías son imágenes ilustrativas cargadas desde Unsplash; se necesita conexión a internet para verlas.</p><strong>Londres · 4–7 diciembre 2026</strong><p>St David’s Hotels · Paddington · 4 adultos</p><p><a href="#viaje">Volver a vuelos y alojamiento ↑</a></p></div></footer>
+
+<footer class="footer"><div class="wrap"><strong>Londres · 4–7 diciembre 2026</strong><p>St David’s Hotels · Paddington · 4 adultos</p><p>Fotos: David Iliff, Wikimedia Commons (CC BY-SA) · se necesita conexión para verlas.</p><p><a href="#viaje">Volver a vuelos y alojamiento ↑</a></p></div></footer>
 </body>
 </html>
